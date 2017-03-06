@@ -4,8 +4,8 @@
 ## Abstract Type
 
 abstract_type:
-[surce](https://github.com/dkubb/abstract_type){:target="_blank"}
-[doc](http://www.rubydoc.info/gems/abstract_class/1.0.1){:target="_blank"}
+[surce](https://github.com/dkubb/abstract_type)
+[doc](http://www.rubydoc.info/gems/abstract_class/1.0.1)
 
 #### Summary
 
@@ -24,8 +24,8 @@ Once included in a class, this class cannot be instantiated, but its descendants
 ## Equalizer
 
 equalizer:
-[source](https://github.com/dkubb/equalizer){:target="_blank"}
-[doc](http://www.rubydoc.info/gems/equalizer/0.0.11){:target="_blank"}
+[source](https://github.com/dkubb/equalizer)
+[doc](http://www.rubydoc.info/gems/equalizer/0.0.11)
 
 #### Summary
 
@@ -43,8 +43,8 @@ Module to define equality, equivalence and inspection methods in terms of attrib
 ## Memoizable
 
 memoizable:
-[source](https://github.com/dkubb/memoizable){:target="_blank"}
-[doc](http://www.rubydoc.info/gems/memoizable/0.4.2){:target="_blank"}
+[source](https://github.com/dkubb/memoizable)
+[doc](http://www.rubydoc.info/gems/memoizable/0.4.2)
 
 #### Summary
 
@@ -62,8 +62,8 @@ Memoizable makes an optimization that saves the return value of a method so it d
 ## Ice Nine
 
 ice_nine:
-[source](https://github.com/dkubb/ice_nine){:target="_blank"}
-[doc](http://www.rubydoc.info/gems/ice_nine/0.11.2/IceNine/RecursionGuard/ObjectSet){:target="_blank"}
+[source](https://github.com/dkubb/ice_nine)
+[doc](http://www.rubydoc.info/gems/ice_nine/0.11.2/IceNine/RecursionGuard/ObjectSet)
 
 #### Summary
 
@@ -86,8 +86,8 @@ Deep freeze ruby objects
 ## Adamantium
 
 adamantium
-[source](https://github.com/dkubb/adamantium){:target="_blank"}
-[doc](http://www.rubydoc.info/gems/adamantium/0.2.0){:target="_blank"}
+[source](https://github.com/dkubb/adamantium)
+[doc](http://www.rubydoc.info/gems/adamantium/0.2.0)
 
 #### Summary
 
@@ -115,8 +115,8 @@ Create immutable objects with ease. It allows you to make objects immutable in a
 ## Anima
 
 anima:
-[source](https://github.com/mbj/anima){:target="_blank"}
-[doc](http://www.rubydoc.info/gems/anima/0.3.0){:target="_blank"}
+[source](https://github.com/mbj/anima)
+[doc](http://www.rubydoc.info/gems/anima/0.3.0)
 
 #### Summary
 
@@ -140,8 +140,8 @@ Simple library to declare read only attributes on value-objects that are initial
 ## Concord
 
 concord:
-[source](https://github.com/mbj/concord){:target="_blank"}
-[doc](http://www.rubydoc.info/gems/concord/0.1.5){:target="_blank"}
+[source](https://github.com/mbj/concord)
+[doc](http://www.rubydoc.info/gems/concord/0.1.5)
 
 #### Summary
 
@@ -160,8 +160,8 @@ Mixin to ease compositions in ruby.
 ## Procto
 
 procto:
-[source](https://github.com/snusnu/procto){:target="_blank"}
-[doc](http://www.rubydoc.info/gems/procto/0.0.3){:target="_blank"}
+[source](https://github.com/snusnu/procto)
+[doc](http://www.rubydoc.info/gems/procto/0.0.3)
 
 #### Summary
 
@@ -185,8 +185,8 @@ Turns your ruby object into a method object.
 ## Devtools
 
 devtools:
-[source](https://github.com/mbj/devtools){:target="_blank"}
-[doc](http://www.rubydoc.info/gems/devtools/0.1.16){:target="_blank"}
+[source](https://github.com/mbj/devtools)
+[doc](http://www.rubydoc.info/gems/devtools/0.1.16)
 
 #### Summary
 
@@ -237,8 +237,8 @@ Devtools.init_rake_tasks
 ## Mutant
 
 mutant:
-[source](https://github.com/mbj/mutant){:target="_blank"}
-[doc](http://www.rubydoc.info/gems/mutant/0.8.12){:target="_blank"}
+[source](https://github.com/mbj/mutant)
+[doc](http://www.rubydoc.info/gems/mutant/0.8.12)
 
 #### Summary
 
