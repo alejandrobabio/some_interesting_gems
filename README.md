@@ -1,10 +1,5 @@
 # Some Interesting Gems
 
-Document about some gems that include:
-
-* Summary
-* Dependencies
-* How to use
 
 ## Abstract Type
 
