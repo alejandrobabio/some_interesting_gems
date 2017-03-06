@@ -9,8 +9,8 @@ Document about some gems that include:
 ## Abstract Type
 
 abstract_type:
-[surce](https://github.com/dkubb/abstract_type)
-[doc](http://www.rubydoc.info/gems/abstract_class/1.0.1)
+[surce](https://github.com/dkubb/abstract_type){:target="_blank"}
+[doc](http://www.rubydoc.info/gems/abstract_class/1.0.1){:target="_blank"}
 
 #### Summary
 
@@ -29,8 +29,8 @@ Once included in a class, this class cannot be instantiated, but its descendants
 ## Equalizer
 
 equalizer:
-[source](https://github.com/dkubb/equalizer)
-[doc](http://www.rubydoc.info/gems/equalizer/0.0.11)
+[source](https://github.com/dkubb/equalizer){:target="_blank"}
+[doc](http://www.rubydoc.info/gems/equalizer/0.0.11){:target="_blank"}
 
 #### Summary
 
@@ -48,8 +48,8 @@ Module to define equality, equivalence and inspection methods in terms of attrib
 ## Memoizable
 
 memoizable:
-[source](https://github.com/dkubb/memoizable)
-[doc](http://www.rubydoc.info/gems/memoizable/0.4.2)
+[source](https://github.com/dkubb/memoizable){:target="_blank"}
+[doc](http://www.rubydoc.info/gems/memoizable/0.4.2){:target="_blank"}
 
 #### Summary
 
@@ -67,8 +67,8 @@ Memoizable makes an optimization that saves the return value of a method so it d
 ## Ice Nine
 
 ice_nine:
-[source](https://github.com/dkubb/ice_nine)
-[doc](http://www.rubydoc.info/gems/ice_nine/0.11.2/IceNine/RecursionGuard/ObjectSet)
+[source](https://github.com/dkubb/ice_nine){:target="_blank"}
+[doc](http://www.rubydoc.info/gems/ice_nine/0.11.2/IceNine/RecursionGuard/ObjectSet){:target="_blank"}
 
 #### Summary
 
@@ -91,8 +91,8 @@ Deep freeze ruby objects
 ## Adamantium
 
 adamantium
-[source](https://github.com/dkubb/adamantium)
-[doc](http://www.rubydoc.info/gems/adamantium/0.2.0)
+[source](https://github.com/dkubb/adamantium){:target="_blank"}
+[doc](http://www.rubydoc.info/gems/adamantium/0.2.0){:target="_blank"}
 
 #### Summary
 
@@ -120,8 +120,8 @@ Create immutable objects with ease. It allows you to make objects immutable in a
 ## Anima
 
 anima:
-[source](https://github.com/mbj/anima)
-[doc](http://www.rubydoc.info/gems/anima/0.3.0)
+[source](https://github.com/mbj/anima){:target="_blank"}
+[doc](http://www.rubydoc.info/gems/anima/0.3.0){:target="_blank"}
 
 #### Summary
 
@@ -145,8 +145,8 @@ Simple library to declare read only attributes on value-objects that are initial
 ## Concord
 
 concord:
-[source](https://github.com/mbj/concord)
-[doc](http://www.rubydoc.info/gems/concord/0.1.5)
+[source](https://github.com/mbj/concord){:target="_blank"}
+[doc](http://www.rubydoc.info/gems/concord/0.1.5){:target="_blank"}
 
 #### Summary
 
@@ -160,12 +160,13 @@ Mixin to ease compositions in ruby.
 #### How to use
 
 * In target class `include Concord.new(:foo, :bar)`, and you will get an `initializer` that accepts two positionals parms (foo, bar), protected attribute readers for the each attribute, and equality for target class instances depending on the attributes defined (equalizer). There are a maximum of 3 attributes allowed.
+* If you want public attributes instead of the default protected ones, use `include Concord::Public(:foo, :bar)`.
 
 ## Procto
 
 procto:
-[source](https://github.com/snusnu/procto)
-[doc](http://www.rubydoc.info/gems/procto/0.0.3)
+[source](https://github.com/snusnu/procto){:target="_blank"}
+[doc](http://www.rubydoc.info/gems/procto/0.0.3){:target="_blank"}
 
 #### Summary
 
@@ -189,8 +190,8 @@ Turns your ruby object into a method object.
 ## Devtools
 
 devtools:
-[source](https://github.com/mbj/devtools)
-[doc](http://www.rubydoc.info/gems/devtools/0.1.16)
+[source](https://github.com/mbj/devtools){:target="_blank"}
+[doc](http://www.rubydoc.info/gems/devtools/0.1.16){:target="_blank"}
 
 #### Summary
 
@@ -227,6 +228,7 @@ Authomatize run of all dev tools with `rake ci`
   * reek.yml
   * rubocop.yml
   * yardstick.yml
+* Is expected to find unit tests under `spec/unit/` and integration tests under `spec/integration/`
 * run with `rake ci` or `rake -T` for see all the tasks available
 * You will need a Rakefile with at least:
 
@@ -237,21 +239,40 @@ require 'devtools'
 Devtools.init_rake_tasks
 ```
 
-## Mutation
+## Mutant
 
-mutation:
-[source]()
-[doc]()
+mutant:
+[source](https://github.com/mbj/mutant){:target="_blank"}
+[doc](http://www.rubydoc.info/gems/mutant/0.8.12){:target="_blank"}
 
 #### Summary
 
+Mutant is a mutation testing tool for Ruby.
 
+The idea is that if code can be changed and your tests do not notice, then either that code isn't being covered or it does not have a speced side effect.
 
 #### Dependencies
 
-*
+* abstract_type
+* adamantium
+* anima
+* ast
+* concord
+* diff-lcs
+* equalizer
+* ice_nine
+* memoizable
+* morpher
+* parallel
+* parser
+* procto
+* regexp_parser
+* unparser
+
 
 #### How to use
 
-*
+* `mutant --use rspec <TestedClassName>` in enough for a single class test
+* `mutant -h` shows all the options allowed
+* With devtools it becomes easy with `config/mutant.yml` file, you can run `rake metrics:mutant`
 
