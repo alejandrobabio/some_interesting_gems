@@ -105,79 +105,137 @@ Create immutable objects with ease. It allows you to make objects immutable in a
 
 #### How to use
 
-*
+* It works as a deep immutable object
+  * `include Adamantium` in the class, and make its instances immutable
+  * It allows `memoize` with aditionals options:
+    * `memoize :foo`, memoize `:foo` method response and deep freeze it
+    * `memoize :foo, freezer: :noop`, memoize `:foo` method response but do not freeze it
+    * `memoize :foo, freezer: :flat`, memoize `:foo` method response and do a standard `freeze` on it (not a deep freeze)
+  * In your class a method could call `transform` with a block, that returns a **new instance** with the changes passed to the block.
+* It works as a shallow frozen
+  * `include Adamantium::Flat` in the class
+  * Instance will be frozen, but attributes not.
+  * Default memoized behaviour will be `:flat`
 
 ## Anima
 
 anima:
 [source](https://github.com/mbj/anima)
-[doc]()
+[doc](http://www.rubydoc.info/gems/anima/0.3.0)
 
 #### Summary
 
-
+Simple library to declare read only attributes on value-objects that are initialized via attributes hash.
 
 #### Dependencies
 
-*
+* abstract_type (this is not used)
+* adamantium
+* equalizer
 
 #### How to use
 
-*
+* In the target class `include Anima.new(:one, :two)`, that makes:
+* The initialize method expect a hash with all the keys: `:one, :two`
+* You get an `attr_reader` for each key
+* Define equality of instances of this class when all attributes are equal
+* The instances are immutable, but can call `:with` with new values for some keys, and it returns a new instance with updated values
+* The `:to_h` method returns its attributes
 
 ## Concord
 
 concord:
 [source](https://github.com/mbj/concord)
-[doc]()
+[doc](http://www.rubydoc.info/gems/concord/0.1.5)
 
 #### Summary
 
-
+Mixin to ease compositions in ruby.
 
 #### Dependencies
 
-*
+* adamantium
+* equalizer
 
 #### How to use
 
-*
+* In target class `include Concord.new(:foo, :bar)`, and you will get an `initializer` that accepts two positionals parms (foo, bar), protected attribute readers for the each attribute, and equality for target class instances depending on the attributes defined (equalizer). There are a maximum of 3 attributes allowed.
 
 ## Procto
 
 procto:
 [source](https://github.com/snusnu/procto)
-[doc]()
+[doc](http://www.rubydoc.info/gems/procto/0.0.3)
 
 #### Summary
 
-
+Turns your ruby object into a method object.
 
 #### Dependencies
 
-*
+* none
 
 #### How to use
 
-*
+* When is included with `include Procto.call`
+  * The class should have a method `:call`
+  * The initializer could receive args, and store in instance variables.
+  * You will call the method with `TargetClass.call(args)` and it runs `initialize` with `args`, and then runs `:call`
+* When is included with `include Procto.call(:foo)`
+  * The class should have a method `:foo`
+  * The initializer could receive args, and store in instance variables.
+  * You will call the method with `TargetClass.call(args)` and it runs `initializer` with `args`, and then runs `:foo`
 
 ## Devtools
 
 devtools:
-[source]()
-[doc]()
+[source](https://github.com/mbj/devtools)
+[doc](http://www.rubydoc.info/gems/devtools/0.1.16)
 
 #### Summary
 
-
+Authomatize run of all dev tools with `rake ci`
 
 #### Dependencies
 
-*
+* adamantium
+* anima
+* concord
+* flay
+* flog
+* mutant
+* mutant-rspec
+* procto
+* rake
+* reek
+* rspec
+* rspec-core
+* rspec-its
+* rubocop
+* simplecov
+* yard
+* yardstick
+
 
 #### How to use
 
-*
+* In `spec_helper.rb` add `require 'devtools/spec_helper'`
+* You will need a config/ folder with these files:
+  * flay.yml
+  * flog.yml
+  * mutant.yml
+  * reek.yml
+  * rubocop.yml
+  * yardstick.yml
+* run with `rake ci` or `rake -T` for see all the tasks available
+* You will need a Rakefile with at least:
+
+
+```ruby
+require 'bundler'
+require 'devtools'
+Devtools.init_rake_tasks
+```
 
 ## Mutation
 
