@@ -5,7 +5,7 @@
 
 abstract_type:
 [surce](https://github.com/dkubb/abstract_type)
-[doc](http://www.rubydoc.info/gems/abstract_class/1.0.1)
+[doc](http://www.rubydoc.info/gems/abstract_type/0.0.7)
 
 #### Summary
 
